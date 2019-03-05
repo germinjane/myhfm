@@ -11,6 +11,10 @@
 	<link href="/static/common/inspinia/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 	<!-- datePicker -->
 	<link href="/static/common/inspinia/css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+
+
+      <!-- validator -->
+    <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet" />
     <style type="text/css">
         .form-group{ width: 100%;height: 30px;}
         .ibox-content{display: block}
@@ -113,7 +117,7 @@
                                 </div>
                                  <div class="hr-line-dashed"></div>
                                  <div class="form-group">
-                                 <p align="center"><button type="submit" class="btn btn-primary">保存</button></p></div>
+                                 <p align="center"><button type="submit" id="btn-test" class="btn btn-primary">保存</button></p></div>
                             </form>
 	                       
                         </div>
@@ -130,6 +134,7 @@
 <script type="text/javascript" src="/static/common/inspinia/js/plugins/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="/static/common/inspinia/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="/static/common/inspinia/js/plugins/datapicker/datepicker-unixtime.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript">
 $(function () {
 	$(".date").datepicker();
@@ -149,5 +154,6 @@ $(function () {
 		
 });
 </script>
+<script type="text/javascript" src="/static/common/staff/staff_validate.js"></script>
 </html>
 
