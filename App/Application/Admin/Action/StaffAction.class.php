@@ -285,43 +285,21 @@ class StaffAction extends CommonAction{
 
 	}
 
-	//下载模板
-	public function download(){
-
-		$down = $_GET['f'];   //获取文件参数
-		$filename = $down.'.zip'; //获取文件名称
-		$dir ="down/";  //相对于网站根目录的下载目录路径
-		$down_host = $_SERVER['HTTP_HOST'].'/'; //当前域名//判断如果文件存在,则跳转到下载路径
-		if(file_exists(__DIR__.'/'.$dir.$filename)){
-		header('location:http://'.$down_host.$dir.$filename);
-			}else{
-		header('HTTP/1.1 404 Not Found');
-		}
-	}
-
-
-//	public function indexAction(){
-//		if(IS_POST){
-//			$file = $_FILES;
-//			//上传
-//			$path = $this->upload($file);
-//			//读取excel
-//			$arr = $this->excel($path, 0);
+//	//下载模板
+//	public function download(){
 //
-//			//实例化模型
-//			$model = D('name');
-//			//添加的数据
-//			$data = [];
-//			for($i=2; $i<=count($arr); $i++){
-//				$data[] = ['name'=>$arr[$i]['A'], 'age'=>$arr[$i]['B']];
-//			}
-//			//添加
-//			$model->addAll($data);
-//		}else{
-//			$this->display();
+//		$down = $_GET['f'];   //获取文件参数
+//		$filename = $down.'.xlsx'; //获取文件名称
+////		$dir ="down/";  //相对于网站根目录的下载目录路径
+//		$down_host = $_SERVER['HTTP_HOST'].'/'; //当前域名//判断如果文件存在,则跳转到下载路径
+//		if(file_exists(__DIR__.'/'.$filename)){
+//			echo 'location:http://'.$down_host.$filename;exit;
+//		header('location:http://'.$down_host.$filename);
+//			}else{
+//		header('HTTP/1.1 404 Not Found');
 //		}
-//
 //	}
+
 
 	//上传
 	public function upload($file){
