@@ -3,54 +3,86 @@ class StaffAction extends CommonAction{
 
 	public function staff_list(){
 
-		$opt['where'] =array();
-		//$opt['where'] = array('status'=>1);
-		if(IS_GET){
+		//array_filter
+
+
+		if(IS_GET||IS_POST){
 
 			//分页
 			$p = I('request.p');
-		}
-		//条件搜索查询
-		if(IS_POST){
+//
+//		}
+//
+//		//条件搜索查询
+//		if(IS_POST){
 
-			$start_time = I('request.start_time');
-			$end_time = I('request.end_time');
-			$name = I('request.name');
-			$card = I('request.card');
-			$team = I('request.team');
-			$tel = I('request.tel');
-
-
-
-
-			if(!empty($name)){
-//				$where = 'username like'=>'%'.$username.'% ';
+//			var_dump($_POST);exit;
+			if(!empty(I('request.end_time')) &&(I('request.start_time')>I('request.end_time')) ){
+				$this->error('入职起始日期不能大于入职截止日期！');die;
 			}
-			if(!empty($start_time)){
-				$opt['where'] = array('start_time >='=>$start_time);
+			$where1['start_time'] = I('request.start_time');
+			$where1['end_time'] = I('request.end_time');
+			$where1['name'] = I('request.name');
+			$where1['card'] = I('request.card');
+			$where1['team'] = I('request.team');
+			$where1['tel'] = I('request.tel');
+			$opt = array_filter($where1);
+
+
+			if(!empty($opt)){
+
+				$i = 0; $str='';
+				foreach($opt as $key =>$value){
+
+					if($i != 0){
+						$str.= ' AND ';
+					}
+
+					if($key == 'start_time'){
+						$str .= 'hiredate >= "'.$value.'" ';
+					}else if($key == 'end_time'){
+						$str .= 'hiredate <= "'.$value.'" ';
+					}else{
+						$str .= $key.' like "%'.$value.'%" ';
+
+					}
+					$i++;
+
+				}
+
+
+				$where = $str;
+
 			}
-			if(!empty($username)){
-				$opt['where'] = array('username'=>$username);
-			}
-			if(!empty($username)){
-				$opt['where'] = array('username'=>$username);
-			}
-			$this->assign('name', $name);
-			$this->assign('start_time', $start_time);
-			$this->assign('end_time', $end_time);
-			$this->assign('card', $card);
-			$this->assign('team', $team);
-			$this->assign('tel', $tel);
+
+
+
+
+			$this->assign('name', $where1['name']);
+			$this->assign('start_time', $where1['start_time']);
+			$this->assign('end_time', $where1['end_time']);
+			$this->assign('card', $where1['card']);
+			$this->assign('team', $where1['team']);
+			$this->assign('tel', $where1['tel']);
 		}
 
 
 		$Data = M('Staff');
 		import('ORG.Util.Page');
-		$count = $Data->where($opt['where'])->count();
+//		echo $where;
+//		echo '-------------';
+		$count = $Data->where($where)->count();
+
+
 		$Page = new \Page($count, 10);
 		$show = $Page->show();
-		$list = $Data->where($opt['where'])->order('id')->limit($Page->firstRow.','.$Page->listRows)
+		$list = $Data->where($where)->order('id')->limit($Page->firstRow.','.$Page->listRows)
 			->select();
+//		if(IS_POST){
+//			echo $Data ->getLastSql();
+//
+//			echo '-------------';exit;}
+
 
 		$this->assign('res', $list);
 		$this->assign('page',$show);// 赋值分页输出
@@ -163,14 +195,14 @@ class StaffAction extends CommonAction{
 	}
 	
 	//员工基本信息条件搜索
-	public function check_exist($username,$id=0){
+	public function check_exist($name,$id=0){
 
 		if($id!=0){
-			$sql=" username='{$username}' and id<>'{$id}' ";
+			$sql=" name='{$username}' and id<>'{$id}' ";
 		}else{
-			$sql=" username='{$username}' ";
+			$sql=" name='{$username}' ";
 		}
-		$userinfo= D('User')->where($sql)->find();
+		$userinfo= D('Staff')->where($sql)->find();
 
 		if(empty($userinfo)){
 			return false;
@@ -190,19 +222,24 @@ class StaffAction extends CommonAction{
 				$data = [];
 
 				$stard = array(
-					'A'	=>	'团队',
+					'A'	=>	'所属团队',
 					'B'	=>	'姓名',
 					'C'	=>	'性别',
 					'D'	=>	'身份证号码',
 					'E'	=>	'联系方式',
 					'F'	=>	'入职时间',
-					'G'	=>	'在职/离岗',
+					'G'	=>	'在岗/离职',
 					'H'	=>	'离职时间',
 					'I'	=>	'备注'
 					);
-				if($arr[0] !== $stard){
+
+//				var_dump($arr[1]);
+//				var_dump($stard);
+//				exit;
+				if($arr[1] !== $stard){
 					$this->error('首行格式不正确！');die;
 				}
+				$create_time = date("Y-m-d");
 				for($i=2; $i<= count($arr); $i++){
 
 					//数据格式判断
@@ -210,18 +247,28 @@ class StaffAction extends CommonAction{
 					$dat = array(
 						'team'	=>	$arr[$i]['A'],
 						'name'	=>	$arr[$i]['B'],
-						'sex'	=>	($arr[$i]['C']=='男')?1:0,
+						'sex'	=>	$arr[$i]['C']=='男'?1:2,
 						'card'	=>	$arr[$i]['D'],
 						'tel'	=>	$arr[$i]['E'],
 						'hiredate'	=>	$arr[$i]['F'],
 						'is_leave'	=>	($arr[$i]['G'] == '在职')?1:2,
 						'leave_time'=>	$arr[$i]['H'],
-						'remark'	=>	$arr[$i]['I']
+						'remark'	=>	$arr[$i]['I'],
+						'create_time' =>$create_time,
+						'is_leave'	=> empty($leave_time)? 1:2
+
 						);
+
 
 					$data[] = $dat;
 				}
 
+				$insertInfo = D('staff')->addAll($data);
+
+				if($insertInfo){
+					$this->success('导入成功!','/admin/Staff/staff_list/');
+				}
+				$this->error('导入失败！');die;
 			}else{
 				$this->error('文件类型必须是excel！');die;
 			}
@@ -236,6 +283,20 @@ class StaffAction extends CommonAction{
 	//导出Excel
 	public function export_staff(){
 
+	}
+
+	//下载模板
+	public function download(){
+
+		$down = $_GET['f'];   //获取文件参数
+		$filename = $down.'.zip'; //获取文件名称
+		$dir ="down/";  //相对于网站根目录的下载目录路径
+		$down_host = $_SERVER['HTTP_HOST'].'/'; //当前域名//判断如果文件存在,则跳转到下载路径
+		if(file_exists(__DIR__.'/'.$dir.$filename)){
+		header('location:http://'.$down_host.$dir.$filename);
+			}else{
+		header('HTTP/1.1 404 Not Found');
+		}
 	}
 
 

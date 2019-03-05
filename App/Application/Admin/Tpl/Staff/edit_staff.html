@@ -42,18 +42,19 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">性别:</label>
                                     <div class="col-md-6">
-                                        <input type="radio" class="" placeholder="男"  checked='<if condition="$res.sex eq 1">checked</if>'  value="1" class="sex" name="sex">
+                                        <input type="radio"  placeholder="男"  class="sex1"   value="1" name="sex">
                                         <span>男</span>
-                                        <input type="radio" class="" placeholder="女"  checked='<if condition="$res.sex eq 2">checked</if>'  class="sex" value="2" name="sex">女
+                                        <input type="radio"  placeholder="女"    class="sex2" value="2" name="sex">
+                                        <span>女</span>
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">是否在岗:</label>
                                     <div class="col-md-6">
-                                        <input type="radio" class="" placeholder="在职"  <?php if($res.is_leave==1){ ?>checked<?php }?>  class="is_leave"  value="1" name="is_leave">
+                                        <input type="radio" placeholder="在职"   class="is_leave1"  value="1" name="is_leave">
                                         <span>在职</span>
-                                        <input type="radio" class="" placeholder="离岗"   <?php if($res.is_leave==2){ ?>checked<?php }?> class="is_leave"  value="2" name="is_leave">
+                                        <input type="radio"  placeholder="离岗"    class="is_leave2"  value="2" name="is_leave">
                                         <span>离岗</span>
                                     </div>
 
@@ -131,8 +132,19 @@
 <script type="text/javascript">
 $(function () {
 	$(".date").datepicker();
-	
-			
+
+
+    var sex = parseInt("<{$res.sex}>");
+    sex = sex%2>0? 1:2;
+
+    $(".sex"+sex).attr("checked",true);
+
+
+    var is_leave = parseInt("<{$res.is_leave}>");
+    is_leave = is_leave%2>0?1:2;
+    $(".is_leave"+is_leave).attr('checked',true);
+
+
 		
 });
 </script>

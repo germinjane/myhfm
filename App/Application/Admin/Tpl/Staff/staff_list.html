@@ -12,7 +12,11 @@
 	<!-- datePicker -->
 	<link href="/static/common/inspinia/css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
 	<style type="text/css">
-		.check_box{ width: 14%; display: block;}
+		.check_box{ width: 14%; display: block; margin-left: 10%;}
+		.input-group{ margin-right: 2%;}
+		.float-left{float:left !important;}
+		.col-md-1{ width: 15%;}
+		.col-md-2{	width: 20%;}
 	</style>
 	<script type="application/javascript">
 
@@ -25,9 +29,9 @@
 			<h2 class="col-md-6">
 				<a href="/admin/staff/add_staff/" class="btn btn-primary">添加员工</a>
 				&nbsp;
-				<a href="/admin/staff/import_excel/" class="btn btn-primary">导入EXCEL</a>
+				<a href="/admin/staff/import_staff/" class="btn btn-primary">导入EXCEL</a>
 				&nbsp;
-				<a href="/admin/staff/export_excel/" class="btn btn-primary">导出EXCEL</a>
+				<a href="/admin/staff/export_staff/" class="btn btn-primary">导出EXCEL</a>
 
 			</h2>
 
@@ -42,25 +46,29 @@
 					
 					<div class="">
                      <form class="form-horizontal" action="/admin/staff/staff_list/" method="post" >
-						<div class="input-group">
+						<div class="input-group check-box">
 
-							<div class=" check_box input-group date">
+							<div class=" col-md-1 input-group date float-left">
 								<span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
-								<input type="text" class="form-control datePicker" name="start_date" style="color: red;"  id="start_date" placeholder="选择入职起始日期">
+								<input type="text" class="form-control datePicker" name="start_time" style="color: red;"value="<{$start_time}>"  id="start_date" placeholder="选择入职起始日期">
 							</div>
 
-							<div class="check_box input-group date">
+							<div class="col-md-1 input-group date float-left">
 								<span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
-								<input type="text" class="form-control datePicker" name="end_date" style="color: red;"  id="end_date" placeholder="选择入职截止日期">
+								<input type="text" class="form-control datePicker" name="end_time" style="color: red;"  id="end_date" value="<{$end_time}>"  placeholder="选择入职截止日期">
 							</div>
 
-							<div>
-								<input type="text" class=" form-control input-sm pull-left col-lg-4" placeholder="姓名"  value="<{$name}>" id="name" name="name">
+							<div class="col-md-1">
+								<input type="text" class=" form-control input-sm pull-left " placeholder="姓名"  value="<{$name}>" id="name" name="name">
+							</div>
+							<div class="col-md-1">
 
-								<input type="text" class=" form-control input-sm pull-left col-lg-4" placeholder="身份证"  value="<{$card}>" id="card" name="card">
-
+								<input type="text" class=" form-control input-sm pull-left " placeholder="身份证"  value="<{$card}>" id="card" name="card">
+							</div>
+							<div class="col-md-1">
 								<input type="text" class=" form-control input-sm" placeholder="团队"  value="<{$team}>" id="team" name="team">
-
+							</div>
+							<div class="col-md-1">
 								<input type="text" class=" form-control input-sm" placeholder="电话"  value="<{$tel}>" id="tel" name="tel">
 							</div>
 
