@@ -1,0 +1,538 @@
+[ 2019-02-15T16:36:39+08:00 ] 113.66.255.19 /user
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000468s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+
+[ 2019-02-15T16:36:39+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000451s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004881s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000201s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000194s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000115s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000863s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000342s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2019-02-15T16:36:39+08:00 ] 113.66.255.19 /static/common/inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+ERR: 无法加载模块:Static
+
+[ 2019-02-15T16:36:39+08:00 ] 113.66.255.19 /user/login/vertify.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000456s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+
+[ 2019-02-15T16:36:40+08:00 ] 113.66.255.19 /user/login/vertify?rand=63
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+
+[ 2019-02-15T16:36:55+08:00 ] 180.163.220.5 /user
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+
+[ 2019-02-15T16:37:00+08:00 ] 180.163.220.5 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004912s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000199s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000209s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000120s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000888s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000341s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2019-02-15T16:37:01+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.008751s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000130s ]
+
+[ 2019-02-15T16:37:01+08:00 ] 113.66.255.19 /user/login/vertify?rand=28
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+
+[ 2019-02-15T16:37:09+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000460s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+
+[ 2019-02-15T16:37:09+08:00 ] 180.163.220.66 /static/common/inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+ERR: 无法加载模块:Static
+
+[ 2019-02-15T16:37:09+08:00 ] 180.163.220.4 /user/login/vertify.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+
+[ 2019-02-15T16:37:09+08:00 ] 113.66.255.19 /user/login/vertify?rand=97
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+
+[ 2019-02-15T16:37:22+08:00 ] 113.66.255.19 /user/login/vertify?rand=64
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000456s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+
+[ 2019-02-15T16:37:27+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.027747s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000147s ]
+
+[ 2019-02-15T16:37:27+08:00 ] 113.66.255.19 /user/login/vertify?rand=52
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000466s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+
+[ 2019-02-15T16:37:33+08:00 ] 42.236.10.92 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 243 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 246 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 249 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 252 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 255 行.
+NOTIC: [8] Undefined variable: browserplatform /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 267 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 268 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 270 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 272 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 274 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 276 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 278 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 280 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 282 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 284 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 286 行.
+SQL: SHOW COLUMNS FROM `fm_user_temp` [ RunTime:0.000498s ]
+SQL: SELECT * FROM `fm_user_temp` WHERE ( sign='' ) LIMIT 1   [ RunTime:0.000153s ]
+
+[ 2019-02-15T16:37:33+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000606s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000153s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000145s ]
+
+[ 2019-02-15T16:37:33+08:00 ] 113.66.255.19 /user/login/vertify?rand=17
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000455s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+
+[ 2019-02-15T16:37:45+08:00 ] 42.236.10.117 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 243 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 246 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 249 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 252 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 255 行.
+NOTIC: [8] Undefined variable: browserplatform /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 267 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 268 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 270 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 272 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 274 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 276 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 278 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 280 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 282 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 284 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 286 行.
+SQL: SHOW COLUMNS FROM `fm_user_temp` [ RunTime:0.000543s ]
+SQL: SELECT * FROM `fm_user_temp` WHERE ( sign='' ) LIMIT 1   [ RunTime:0.000166s ]
+
+[ 2019-02-15T16:38:11+08:00 ] 113.66.255.19 /user/login/vertify?rand=48
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+
+[ 2019-02-15T16:38:12+08:00 ] 113.66.255.19 /user/login/vertify?rand=93
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+
+[ 2019-02-15T16:38:13+08:00 ] 113.66.255.19 /user/login/vertify?rand=62
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000464s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+
+[ 2019-02-15T16:38:18+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000456s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000694s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000166s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000147s ]
+
+[ 2019-02-15T16:38:18+08:00 ] 113.66.255.19 /user/login/vertify?rand=24
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000452s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+
+[ 2019-02-15T16:38:23+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000468s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.021036s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000171s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000116s ]
+
+[ 2019-02-15T16:38:23+08:00 ] 113.66.255.19 /user/login/vertify?rand=6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000445s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+
+[ 2019-02-15T16:39:06+08:00 ] 113.66.255.19 /user
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000468s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+
+[ 2019-02-15T16:39:06+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000468s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005104s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000199s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000200s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000120s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000887s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000342s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2019-02-15T16:39:06+08:00 ] 113.66.255.19 /static/common/inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000455s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+ERR: 无法加载模块:Static
+
+[ 2019-02-15T16:39:06+08:00 ] 113.66.255.19 /user/login/vertify.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000456s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+
+[ 2019-02-15T16:39:07+08:00 ] 113.66.255.19 /user/login/vertify?rand=38
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000452s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+
+[ 2019-02-15T16:39:18+08:00 ] 113.66.255.19 /user
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+
+[ 2019-02-15T16:39:18+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000456s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005124s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000207s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000199s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000122s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000888s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000348s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2019-02-15T16:39:18+08:00 ] 113.66.255.19 /static/common/inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+ERR: 无法加载模块:Static
+
+[ 2019-02-15T16:39:18+08:00 ] 113.66.255.19 /user/login/vertify.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000459s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+
+[ 2019-02-15T16:39:19+08:00 ] 113.66.255.19 /user/login/vertify?rand=37
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000449s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+
+[ 2019-02-15T16:39:26+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000646s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000160s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000129s ]
+
+[ 2019-02-15T16:39:26+08:00 ] 113.66.255.19 /user/login/vertify?rand=41
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000456s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+
+[ 2019-02-15T16:39:53+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000467s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000670s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000171s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000183s ]
+
+[ 2019-02-15T16:39:53+08:00 ] 113.66.255.19 /user/login/vertify?rand=85
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+
+[ 2019-02-15T16:39:59+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000625s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000148s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000115s ]
+
+[ 2019-02-15T16:39:59+08:00 ] 113.66.255.19 /user/login/vertify?rand=46
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000453s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+
+[ 2019-02-15T16:40:02+08:00 ] 113.66.255.19 /user/login/vertify?rand=15
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000467s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+
+[ 2019-02-15T16:40:03+08:00 ] 113.66.255.19 /user/login/vertify?rand=40
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000469s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+
+[ 2019-02-15T16:40:09+08:00 ] 113.66.255.19 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000687s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000163s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'ltgj2018' ) AND ( `password` = '3ad72e9cc4471b04fe72026181b3adca' ) AND ( `last_time` >= '2019-02-15' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000123s ]
+
+[ 2019-02-15T16:40:09+08:00 ] 113.66.255.19 /user/login/vertify?rand=44
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+
+[ 2019-02-15T16:54:21+08:00 ] 61.140.62.250 /user/index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000473s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+
+[ 2019-02-15T16:54:21+08:00 ] 61.140.62.250 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000451s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004879s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000193s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000202s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000113s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000859s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000333s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2019-02-15T16:54:21+08:00 ] 61.140.62.250 /static/common/inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000449s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+ERR: 无法加载模块:Static
+
+[ 2019-02-15T16:54:21+08:00 ] 61.140.62.250 /user/login/vertify.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+
+[ 2019-02-15T16:54:22+08:00 ] 61.140.62.250 /user/login/vertify?rand=87
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+

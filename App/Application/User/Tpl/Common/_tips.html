@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>信息提示-后台管理</title>
+<link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css" />
+<script>
+	var i =0,url = '<{$url}>';
+	setInterval(function(){
+		if(i++==1){
+			if(url){
+				location.href=url;
+			}else{
+				history.back();
+			}
+		}
+	},1000);
+</script>
+<style>
+	.admin_login_wrap h1{border: 1px solid #eee;
+    box-shadow: 1px 2px 3px #ccc;margin-bottom: 0;padding:10px 0px 10px 5px;}
+</style>
+</head>
+<body>
+	<div class="admin_login_wrap">
+	    <h1>信息提示</h1>
+	    <div class="adming_login_border">
+	        <div class="admin_input">
+                <ul class="admin_items">
+                    <li>
+                       <{$msg}>
+                    </li>
+                </ul>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>

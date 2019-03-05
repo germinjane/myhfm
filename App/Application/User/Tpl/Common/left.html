@@ -1,0 +1,30 @@
+<style>
+    .sub-menu{padding-left:10px;}
+</style>
+<div class="sidebar-wrap">
+    <div class="sidebar-title">
+        <h1>菜单</h1>
+    </div>
+    <div class="sidebar-content">
+        <ul class="sidebar-list">
+            <volist name='menus' id='v'>
+                <li>
+                    <a href="javascript:void(0);"><i class="icon-font"></i><{$v.auth_name}></a>
+                    <ul class="sub-menu">
+                        <volist name='submenus' id='v1'>
+                            <if condition="$v['id'] eq $v1['auth_pid']">
+                              
+                                    <if condition="$v1.auth_path eq $a">
+                                        <a  href="/home/<{$v1.auth_c}>/<{$v1.auth_a}>.html" class="on"><i class="icon-font"></i><b><{$v1.auth_name}></b></a>
+                                        <else />
+                                        <a  href="/home/<{$v1.auth_c}>/<{$v1.auth_a}>.html" ><i class="icon-font"></i><{$v1.auth_name}></a>
+                                    </if>
+                              
+                            </if>
+                        </volist>
+                    </ul>
+                </li>
+            </volist>
+        </ul>
+    </div>
+</div>

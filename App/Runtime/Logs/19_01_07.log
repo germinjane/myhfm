@@ -1,0 +1,954 @@
+[ 2019-01-07T11:00:37+08:00 ] 113.65.206.116 /user/index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000465s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+
+[ 2019-01-07T11:00:37+08:00 ] 113.65.206.116 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000451s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004861s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000194s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000112s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000848s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000338s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2019-01-07T11:00:37+08:00 ] 113.65.206.116 /static/common/inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+ERR: 无法加载模块:Static
+
+[ 2019-01-07T11:00:37+08:00 ] 113.65.206.116 /user/login/vertify.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000453s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+
+[ 2019-01-07T11:00:37+08:00 ] 113.65.206.116 /user/login/vertify?rand=17
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000459s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+
+[ 2019-01-07T11:00:49+08:00 ] 113.65.206.116 /user/login/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000452s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000692s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `username` = 'gw2018' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000158s ]
+SQL: SELECT `id` FROM `fm_user` WHERE ( `username` = 'gw2018' ) AND ( `password` = 'c8189a28d8d02a40cffb77eeaddc3166' ) AND ( `last_time` >= '2019-01-07' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000114s ]
+SQL: SHOW COLUMNS FROM `fm_log` [ RunTime:0.000448s ]
+SQL: INSERT INTO bd_log (connent,ip,add_time) VALUES ('[gw2018],登录成功。','113.65.206.116','2019-01-07 11:00:49'); [ RunTime:0.000084s ]
+ERR: 1146:Table 'myhfm.bd_log' doesn't exist
+ [ SQL语句 ] : INSERT INTO bd_log (connent,ip,add_time) VALUES ('[gw2018],登录成功。','113.65.206.116','2019-01-07 11:00:49');
+
+[ 2019-01-07T11:00:49+08:00 ] 113.65.206.116 /user/index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000612s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000139s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005569s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000189s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000192s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000863s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000359s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2019-01-07T11:00:49+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000458s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000592s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000509s ]
+NOTIC: [8] Undefined variable: data /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 179 行.
+NOTIC: [8] Undefined variable: page /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 235 行.
+NOTIC: [8] Undefined variable: count /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 236 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: list /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 101 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009394s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000205s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000202s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000125s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000898s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000363s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2019-01-07T11:01:27+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000642s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000185s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) LIMIT 1   [ RunTime:0.001533s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) ORDER BY id desc  [ RunTime:0.003331s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Use of undefined constant sex - assumed 'sex' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 105 行.
+NOTIC: [8] Undefined index: wechat /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 108 行.
+NOTIC: [8] Undefined index: qq /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 109 行.
+NOTIC: [8] Undefined index: job /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 110 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010017s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000203s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000199s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000357s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2019-01-07T11:05:32+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000680s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000557s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%15994857411%' ) AND ( `tel` LIKE '%15994857411%' ) LIMIT 1   [ RunTime:0.001716s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%15994857411%' ) AND ( `tel` LIKE '%15994857411%' ) ORDER BY id desc  [ RunTime:0.003350s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009321s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000197s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000193s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000120s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000854s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000328s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2019-01-07T11:05:37+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000449s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.014183s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000554s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `tel` LIKE '%15994857411%' ) LIMIT 1   [ RunTime:0.002023s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `tel` LIKE '%15994857411%' ) ORDER BY id desc  [ RunTime:0.003860s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009256s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000195s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000202s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000853s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000327s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2019-01-07T11:05:49+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000465s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000686s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000546s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%胡秀婷%' ) AND ( `tel` LIKE '%15994857411%' ) LIMIT 1   [ RunTime:0.001792s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%胡秀婷%' ) AND ( `tel` LIKE '%15994857411%' ) ORDER BY id desc  [ RunTime:0.003390s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009930s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009978s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000205s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000193s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000855s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2019-01-07T11:28:19+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000689s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000552s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%蔡婷婷%' ) LIMIT 1   [ RunTime:0.001551s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%蔡婷婷%' ) ORDER BY id desc  [ RunTime:0.003340s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009676s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000194s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000109s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000842s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000362s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2019-01-07T11:28:31+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000493s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000634s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `tel` LIKE '%15018440166%' ) LIMIT 1   [ RunTime:0.002021s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `tel` LIKE '%15018440166%' ) ORDER BY id desc  [ RunTime:0.003810s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009290s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000204s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000215s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000120s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000891s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000343s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2019-01-07T14:54:12+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000453s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000692s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%13751826062%' ) AND ( `tel` LIKE '%13751826062%' ) LIMIT 1   [ RunTime:0.001712s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%13751826062%' ) AND ( `tel` LIKE '%13751826062%' ) ORDER BY id desc  [ RunTime:0.003351s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009510s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000203s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000194s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000851s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000363s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2019-01-07T14:54:23+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000630s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%ID:645604113	  林红燕%' ) AND ( `tel` LIKE '%13751826062%' ) LIMIT 1   [ RunTime:0.001694s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%ID:645604113	  林红燕%' ) AND ( `tel` LIKE '%13751826062%' ) ORDER BY id desc  [ RunTime:0.003340s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009259s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000193s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000191s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000117s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000842s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000326s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2019-01-07T14:54:28+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000449s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.014260s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%林红燕%' ) AND ( `tel` LIKE '%13751826062%' ) LIMIT 1   [ RunTime:0.001741s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%林红燕%' ) AND ( `tel` LIKE '%13751826062%' ) ORDER BY id desc  [ RunTime:0.003398s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009982s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000195s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000205s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000112s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2019-01-07T14:54:36+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000460s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000654s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000149s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000506s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) AND ( `tel` LIKE '%13751826062%' ) LIMIT 1   [ RunTime:0.001760s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) AND ( `tel` LIKE '%13751826062%' ) ORDER BY id desc  [ RunTime:0.003384s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009278s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000193s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000842s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000327s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2019-01-07T14:54:38+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000577s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000137s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) AND ( `tel` LIKE '%13751826062%' ) LIMIT 1   [ RunTime:0.001742s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) AND ( `tel` LIKE '%13751826062%' ) ORDER BY id desc  [ RunTime:0.003396s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009382s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000213s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000204s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000119s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000371s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2019-01-07T14:54:41+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000455s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000664s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000583s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) LIMIT 1   [ RunTime:0.001571s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%吴志红%' ) ORDER BY id desc  [ RunTime:0.003347s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Use of undefined constant sex - assumed 'sex' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 105 行.
+NOTIC: [8] Undefined index: wechat /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 108 行.
+NOTIC: [8] Undefined index: qq /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 109 行.
+NOTIC: [8] Undefined index: job /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 110 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009338s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000194s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000112s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000850s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000337s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2019-01-07T14:56:41+08:00 ] 210.21.234.58 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 243 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 246 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 249 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 252 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 255 行.
+NOTIC: [8] Undefined variable: browserplatform /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 267 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 268 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 270 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 272 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 274 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 276 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 278 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 280 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 282 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 284 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 286 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 288 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 290 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 292 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 294 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 296 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 298 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 300 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 302 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 304 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 306 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 308 行.
+NOTIC: [8192] Function ereg() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 310 行.
+NOTIC: [8192] Function eregi() is deprecated /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 312 行.
+NOTIC: [8] Undefined variable: browserplatform /home/www/myhfm/App/Application/Kw/Action/IndexAction.class.php 第 315 行.
+SQL: SHOW COLUMNS FROM `fm_user_temp` [ RunTime:0.000515s ]
+SQL: SELECT * FROM `fm_user_temp` WHERE ( sign='' ) LIMIT 1   [ RunTime:0.000160s ]
+
+[ 2019-01-07T15:10:10+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000678s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000155s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000545s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%柯丽玉%' ) LIMIT 1   [ RunTime:0.001554s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%柯丽玉%' ) ORDER BY id desc  [ RunTime:0.003337s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009560s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000195s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000199s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000848s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000355s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2019-01-07T16:03:32+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000681s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000556s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%黎诗韵%' ) LIMIT 1   [ RunTime:0.001548s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%黎诗韵%' ) ORDER BY id desc  [ RunTime:0.003334s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009587s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000200s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000112s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000855s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000353s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2019-01-07T16:03:44+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000628s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000145s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000546s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `tel` LIKE '%17620723613%' ) LIMIT 1   [ RunTime:0.002019s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `tel` LIKE '%17620723613%' ) ORDER BY id desc  [ RunTime:0.003825s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009446s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000198s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000196s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000112s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000359s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2019-01-07T16:03:44+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000614s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000544s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `tel` LIKE '%17620723613%' ) LIMIT 1   [ RunTime:0.002022s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `tel` LIKE '%17620723613%' ) ORDER BY id desc  [ RunTime:0.003837s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009225s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000195s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000192s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000116s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000847s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000328s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2019-01-07T16:09:16+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000451s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000715s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000155s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000551s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `tel` LIKE '%17620723613%' ) LIMIT 1   [ RunTime:0.002020s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `tel` LIKE '%17620723613%' ) ORDER BY id desc  [ RunTime:0.003829s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009254s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000194s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000192s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000838s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000328s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2019-01-07T16:11:16+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000676s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000585s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%陈黄鹃%' ) LIMIT 1   [ RunTime:0.001566s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%陈黄鹃%' ) ORDER BY id desc  [ RunTime:0.003345s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009272s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000194s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000193s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000847s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000329s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2019-01-07T16:11:33+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000461s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000669s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000153s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000546s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `tel` LIKE '%15013083170%' ) LIMIT 1   [ RunTime:0.002078s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `tel` LIKE '%15013083170%' ) ORDER BY id desc  [ RunTime:0.003861s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009244s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000201s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000194s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000845s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000335s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2019-01-07T17:21:36+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000458s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000689s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000168s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000550s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) AND ( `tel` LIKE '%15013083170%' ) LIMIT 1   [ RunTime:0.001759s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) AND ( `tel` LIKE '%15013083170%' ) ORDER BY id desc  [ RunTime:0.003396s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009318s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000199s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000196s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000113s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000226s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000857s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000336s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000379s ]
+
+[ 2019-01-07T17:21:38+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000606s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000142s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000544s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) LIMIT 1   [ RunTime:0.001541s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) ORDER BY id desc  [ RunTime:0.003334s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009218s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000205s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000197s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000112s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000863s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000335s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2019-01-07T17:29:31+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000711s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) AND ( `tel` LIKE '%13660222647%' ) LIMIT 1   [ RunTime:0.001788s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) AND ( `tel` LIKE '%13660222647%' ) ORDER BY id desc  [ RunTime:0.003390s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009321s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000193s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000226s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000851s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000330s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2019-01-07T17:29:45+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000451s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000680s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) AND ( `tel` LIKE '%曾晓君%' ) LIMIT 1   [ RunTime:0.001742s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) AND ( `tel` LIKE '%曾晓君%' ) ORDER BY id desc  [ RunTime:0.003390s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009275s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000197s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000199s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000853s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000329s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2019-01-07T17:29:54+08:00 ] 113.65.206.116 /user/userset/user_list.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000458s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `fm_user` [ RunTime:0.000627s ]
+SQL: SELECT * FROM `fm_user` WHERE ( `id` = 47 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000139s ]
+SQL: SHOW COLUMNS FROM `fm_staff` [ RunTime:0.000552s ]
+NOTIC: [8] Undefined index: order /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 146 行.
+NOTIC: [8] Use of undefined constant PAGE_NUM - assumed 'PAGE_NUM' /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 158 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) LIMIT 1   [ RunTime:0.001549s ]
+SQL: SELECT * FROM `fm_staff` WHERE ( `name` LIKE '%曾晓君%' ) ORDER BY id desc  [ RunTime:0.003336s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 166 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/www/myhfm/App/Application/User/Action/UsersetAction.class.php 第 171 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant starttime - assumed 'starttime' /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: bdate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 46 行.
+NOTIC: [8] Undefined variable: edate /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 51 行.
+NOTIC: [8] Undefined variable: order /home/www/myhfm/App/Runtime/Cache/User/6b7fc4a0e6e78c19e861489fe7a3bfc6.php 第 153 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009235s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000195s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000197s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000120s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000226s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000860s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000328s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000370s ]
+

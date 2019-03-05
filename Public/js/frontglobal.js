@@ -1,0 +1,21 @@
+$(function(){
+	$('#meau-fold').on('click',function(event){
+		event.stopPropagation();
+		if($(this).hasClass('meau-hover')){
+			$(this).removeClass('meau-hover');
+			$('.meau-float').removeClass('meau-float-hover');
+		}else{
+			$(this).addClass('meau-hover');
+			$('.meau-float').addClass('meau-float-hover');
+		}
+	})
+	$('.meau-float').on('click',function(event){
+		event.stopPropagation();
+		$('#meau-fold').addClass('meau-hover');
+		$('.meau-float').addClass('meau-float-hover');
+	})
+	$(document).click(function(){
+	    $('#meau-fold').removeClass('meau-hover');
+		$('.meau-float').removeClass('meau-float-hover');
+	});
+})
