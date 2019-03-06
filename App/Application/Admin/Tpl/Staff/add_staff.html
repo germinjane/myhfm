@@ -16,6 +16,10 @@
     
     <style type="text/css">
         .form-group{ width: 100%;min-height: 30px;}
+
+        .input-vali{ position: relative !important;}
+        .input-vali .help-block{ position: absolute !important;    left: 100% !important;
+            bottom: 2px !important;    display: block; width: 180px;}
     </style>
 </head>
 <body class="gray-bg">
@@ -27,13 +31,13 @@
                 <div class="ibox-title">
                     <h2>添加职员</h2>
                 </div>
-                <div class="ibox-content">
+                <div class="ibox-content" style="overflow: hidden !important;">
                     <div class="row m-t">
                         <div class="col-md-12">
                             <form class="form-horizontal" action="/admin/staff/add_staff/" method="post" >
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">姓名:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="姓名" value="<{$res.name}>" id="name" name="name">
 
                                     </div>
@@ -62,21 +66,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">所属团队:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="所属团队" value="<{$res.team}>" id="team" name="team">
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">电话:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="电话" value="<{$res.tel}>" id="tel" name="tel">
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">身份证号码:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="身份证号码" value="<{$res.card}>" id="card" name="card">
                                     </div>
 
@@ -84,7 +88,7 @@
 
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">备注:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="备注" value="<{$res.remark}>" id="remark" name="remark">
                                     </div>
 
@@ -92,7 +96,7 @@
 
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">入职时间:</label>
-                                    <div class="col-md-6 date">
+                                    <div class="col-md-6 date input-vali">
                                         <div class="input-group date">
                                             <span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
                                             <input type="text" class="form-control datePicker" name="hiredate" style="color: red;" value="<{$res.hiredate}>" id="hiredate" placeholder="入职时间">
@@ -104,7 +108,7 @@
                                 
                                  <div class="form-group">
                                      <label class="col-md-2 control-label">离职时间:</label>
-                                     <div class="col-md-6 date">
+                                     <div class="col-md-6 date input-vali">
                                          <div class="input-group date">
                                              <span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
                                              <input type="text" class="form-control datePicker" name="leave_time" style="color: red;" value="<{$res.leave_time}>" id="leave_time" placeholder="离职时间">

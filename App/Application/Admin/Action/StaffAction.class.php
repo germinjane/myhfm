@@ -1,6 +1,8 @@
 <?php
 class StaffAction extends CommonAction{
 
+
+
 	public function staff_list(){
 
 		//array_filter
@@ -10,53 +12,8 @@ class StaffAction extends CommonAction{
 
 			//分页
 			$p = I('request.p');
-//
-//		}
-//
-//		//条件搜索查询
-//		if(IS_POST){
 
-//			var_dump($_POST);exit;
-			if(!empty(I('request.end_time')) &&(I('request.start_time')>I('request.end_time')) ){
-				$this->error('入职起始日期不能大于入职截止日期！');die;
-			}
-			$where1['start_time'] = I('request.start_time');
-			$where1['end_time'] = I('request.end_time');
-			$where1['name'] = I('request.name');
-			$where1['card'] = I('request.card');
-			$where1['team'] = I('request.team');
-			$where1['tel'] = I('request.tel');
-			$opt = array_filter($where1);
-
-
-			if(!empty($opt)){
-
-				$i = 0; $str='';
-				foreach($opt as $key =>$value){
-
-					if($i != 0){
-						$str.= ' AND ';
-					}
-
-					if($key == 'start_time'){
-						$str .= 'hiredate >= "'.$value.'" ';
-					}else if($key == 'end_time'){
-						$str .= 'hiredate <= "'.$value.'" ';
-					}else{
-						$str .= $key.' like "%'.$value.'%" ';
-
-					}
-					$i++;
-
-				}
-
-
-				$where = $str;
-
-			}
-
-
-
+			list($where1, $where) = $this->filter_data();
 
 			$this->assign('name', $where1['name']);
 			$this->assign('start_time', $where1['start_time']);
@@ -69,8 +26,7 @@ class StaffAction extends CommonAction{
 
 		$Data = M('Staff');
 		import('ORG.Util.Page');
-//		echo $where;
-//		echo '-------------';
+
 		$count = $Data->where($where)->count();
 
 
@@ -136,6 +92,7 @@ class StaffAction extends CommonAction{
         
     }
 
+	//编辑员工资料
  	public function edit_staff(){
 	 	$id = I('id',0,'intval');
 		if(!$id){
@@ -174,9 +131,12 @@ class StaffAction extends CommonAction{
             
 		
 		
-		$staffinfo= D('Staff')->where(" id='{$id}' ")->find();
+		$staff_info = D('Staff')->where(" id='{$id}' ")->find();
+//		$staff_info['hiredate'] = date('y-m-d', $staff_info['hiredate']);
+		$staff_info['hiredate'] = date('Y-m-d ',strtotime($staff_info['hiredate']));
+//		var_dump($staff_info);exit;
 		
-		$this->assign('res',$staffinfo);
+		$this->assign('res',$staff_info);
 		$this->display();
      
     }
@@ -218,7 +178,7 @@ class StaffAction extends CommonAction{
 			if($_FILES['excel']['type'] == 'application/vnd.ms-excel'||$_FILES['excel']['type'] =='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ){
 				$file = $_FILES;
 				$path = $this->upload($file);
-				$arr = $this->excel($path, 0);
+				$arr = $this->i_excel($path, 0);
 				$data = [];
 
 				$stard = array(
@@ -240,24 +200,31 @@ class StaffAction extends CommonAction{
 					$this->error('首行格式不正确！');die;
 				}
 				$create_time = date("Y-m-d");
+
+				//表格内容格式状态默认是true
+				$format_state = true;
+				//用于存储错误提示信息
+				$error_message = array();
+
 				for($i=2; $i<= count($arr); $i++){
 
 					//数据格式判断
 					
-					$dat = array(
-						'team'	=>	$arr[$i]['A'],
-						'name'	=>	$arr[$i]['B'],
-						'sex'	=>	$arr[$i]['C']=='男'?1:2,
-						'card'	=>	$arr[$i]['D'],
-						'tel'	=>	$arr[$i]['E'],
-						'hiredate'	=>	$arr[$i]['F'],
-						'is_leave'	=>	($arr[$i]['G'] == '在职')?1:2,
-						'leave_time'=>	$arr[$i]['H'],
-						'remark'	=>	$arr[$i]['I'],
-						'create_time' =>$create_time,
-						'is_leave'	=> empty($leave_time)? 1:2
-
-						);
+//					$dat = array(
+//						'team'	=>	$arr[$i]['A'],
+//						'name'	=>	$arr[$i]['B'],
+//						'sex'	=>	$arr[$i]['C']=='男'?1:2,
+//						'card'	=>	$arr[$i]['D'],
+//						'tel'	=>	$arr[$i]['E'],
+//						'hiredate'	=>	$arr[$i]['F'],
+//						'is_leave'	=>	($arr[$i]['G'] == '在职')?1:2,
+//						'leave_time'=>	$arr[$i]['H'],
+//						'remark'	=>	$arr[$i]['I'],
+//						'create_time' =>$create_time,
+//						'is_leave'	=> empty($leave_time)? 1:2
+//
+//						);
+//					if()
 
 
 					$data[] = $dat;
@@ -283,22 +250,140 @@ class StaffAction extends CommonAction{
 	//导出Excel
 	public function export_staff(){
 
+		//如果有筛选条件的话
+		if($_GET){
+			$res = $this->filter_data();
+		}
+		$Data = M('Staff');
+		$list = $Data->where($res[1])->order('id')
+			->select();
+//		var_dump($list);exit;
+
+		$dat[1] =  array(
+			'A'	=>	'所属团队',
+			'B'	=>	'姓名',
+			'C'	=>	'性别',
+			'D'	=>	'身份证号码',
+			'E'	=>	'联系方式',
+			'F'	=>	'入职时间',
+			'G'	=>	'在岗/离职',
+			'H'	=>	'离职时间',
+			'I'	=>	'备注'
+		);
+
+		foreach($list as $key => $value) {
+
+			$roll['A'] = $value['team'];
+			$roll['B'] = $value['name'];
+			$roll['C'] = $value['sex']==1?"男":"女";
+			$roll['D'] = $value['card'];
+			$roll['E'] = $value['tel'];
+			$roll['F'] = date('Y-m-d',strtotime($value['hiredate']));
+			$roll['G'] = $value['is_leave']==1 ?"在岗":"离职";
+			$roll['H'] = $value['leave_time'];
+			$roll['I'] = $value['remark'];
+
+			$dat[$key + 2] = $roll;
+		}
+//		var_dump($dat);exit;
+		$this->e_excel2($dat);		
+		// $this->e_excel2($list);
 	}
 
-//	//下载模板
-//	public function download(){
-//
-//		$down = $_GET['f'];   //获取文件参数
-//		$filename = $down.'.xlsx'; //获取文件名称
-////		$dir ="down/";  //相对于网站根目录的下载目录路径
-//		$down_host = $_SERVER['HTTP_HOST'].'/'; //当前域名//判断如果文件存在,则跳转到下载路径
-//		if(file_exists(__DIR__.'/'.$filename)){
-//			echo 'location:http://'.$down_host.$filename;exit;
-//		header('location:http://'.$down_host.$filename);
-//			}else{
-//		header('HTTP/1.1 404 Not Found');
-//		}
-//	}
+
+
+	//数据条件筛选
+	public function  filter_data(){
+
+		if(!empty(I('request.end_time')) &&(I('request.start_time')>I('request.end_time')) ){
+			$this->error('入职起始日期不能大于入职截止日期！');die;
+		}
+		$where1['start_time'] = I('request.start_time');
+		$where1['end_time'] = I('request.end_time');
+		$where1['name'] = I('request.name');
+		$where1['card'] = I('request.card');
+		$where1['team'] = I('request.team');
+		$where1['tel'] = I('request.tel');
+		$opt = array_filter($where1);
+
+
+		if(!empty($opt)){
+
+			$i = 0; $str='';
+			foreach($opt as $key =>$value){
+
+				if($i != 0){
+					$str.= ' AND ';
+				}
+
+				if($key == 'start_time'){
+					$str .= 'hiredate >= "'.$value.'" ';
+				}else if($key == 'end_time'){
+					$str .= 'hiredate <= "'.$value.'" ';
+				}else{
+					$str .= $key.' like "%'.$value.'%" ';
+
+				}
+				$i++;
+
+			}
+
+
+//			$where = $str;
+			return array($where1, $str);
+
+		}
+
+
+	}
+
+
+	//打包成excel输出
+	public function  e_excel2($arr, $expTitle = "名药汇员工花名册"){
+
+		vendor('PHPExcel.Classes.PHPExcel');
+		$Excel = new \PHPExcel();
+		// 设置
+		$Excel
+			->getProperties()
+			->setCreator("mingyaohui")
+			->setLastModifiedBy("dee")
+			->setTitle("数据EXCEL导出")
+			->setSubject("数据EXCEL导出")
+			->setDescription("数据EXCEL导出")
+			->setKeywords("excel")
+			->setCategory("result file");
+
+		foreach($arr as $key => $val) { // 注意 key 是从 0 还是 1 开始，此处是 0
+			// $num = $key + 1;
+			$Excel->setActiveSheetIndex(0)
+				//Excel的第A列，uid是你查出数组的键值，下面以此类推
+				->setCellValue('A'.$key, $val['A'])
+				->setCellValue('B'.$key, $val['B'])
+				->setCellValue('C'.$key, $val['C'])
+				->setCellValue('D'.$key, $val['D'])
+				->setCellValue('E'.$key, $val['E'])
+				->setCellValue('F'.$key, $val['F'])
+				->setCellValue('G'.$key, $val['G'])
+				->setCellValue('H'.$key, $val['H'])
+				->setCellValue('I'.$key, $val['I']);
+		}
+
+		$Excel->getActiveSheet()->setTitle('export');
+		$Excel->setActiveSheetIndex(0);
+		$name=$expTitle.'_'.date('Ymd',time()).'.xlsx';
+
+		header('Content-Type: application/vnd.ms-excel');
+		header('Content-Disposition: attachment; filename='.$name);
+		header('Cache-Control: max-age=0');
+
+		$ExcelWriter = \PHPExcel_IOFactory::createWriter($Excel, 'Excel2007');
+		$ExcelWriter->save('php://output');
+		exit;
+
+	}
+	
+
 
 
 	//上传
@@ -320,8 +405,8 @@ class StaffAction extends CommonAction{
 		return $info[0]['savepath'] . $info[0]['savename'];
 	}
 
-	//excel
-	public function excel($filePath='', $sheet=0){
+	//把excel内容读出来
+	public function i_excel($filePath='', $sheet=0){
 
 		import("Org.Util.PHPExcel");
 		import("Org.Util.PHPExcel.Reader.Excel5");
@@ -354,17 +439,7 @@ class StaffAction extends CommonAction{
 		return $data;
 	}
 
-//	public function getRandomString($len, $chars=null)
-//	{
-//		if (is_null($chars)){
-//		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-//		}
-//		mt_srand(10000000*(double)microtime());
-//		for ($i = 0, $str = '', $lc = strlen($chars)-1; $i < $len; $i++){
-//		$str .= $chars[mt_rand(0, $lc)];
-//		}
-//		return $str;
-//	}
+
 
 	
 }

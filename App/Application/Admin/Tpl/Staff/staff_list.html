@@ -34,7 +34,8 @@
 				&nbsp;
 				<a href="/admin/staff/import_staff/" class="btn btn-primary">导入EXCEL</a>
 				&nbsp;
-				<a href="/admin/staff/export_staff/" class="btn btn-primary">导出EXCEL</a>
+				<a href="javascript:void(0)"  class="btn btn-primary btn-import">导出EXCEL</a>
+				<!--href="/admin/staff/export_staff/"-->
 
 			</h2>
 
@@ -53,12 +54,12 @@
 							<span class=" text-left text-success col-md-1 col-md-0">日期：</span>
 							<div class=" col-md-1 input-group date float-left">
 								<span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
-								<input type="text" class="form-control datePicker" name="start_time" style="color: red;"value="<{$start_time}>"  id="start_date" placeholder="选择入职起始日期">
+								<input type="text" class="form-control datePicker" name="start_time" style="color: red;"value="<{$start_time}>"  id="start_date" placeholder="入职起始日期">
 							</div>
 
 							<div class="col-md-1 input-group date float-left">
 								<span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
-								<input type="text" class="form-control datePicker" name="end_time" style="color: red;"  id="end_date" value="<{$end_time}>"  placeholder="选择入职截止日期">
+								<input type="text" class="form-control datePicker" name="end_time" style="color: red;"  id="end_date" value="<{$end_time}>"  placeholder="入职截止日期">
 							</div>
 
 							<div class="col-md-1">
@@ -159,9 +160,45 @@
 
 		});
 
-		function is_del(id){
+		$('.btn-import').click(function(){
+//			alert("导出啦！！");
+			var url = "/admin/staff/export_staff/"
+				+"?start_time=<{$start_time}>"
+				+"&end_time=<{$end_time}>"
+				+"&team=<{$team}>"
+				+"&name=<{$name}>"
+				+"&card=<{$card}>"
+				+"&tel=<{$tel}>";
+			window.location.replace(url);		
+			// http://www.myhfm.com/admin/staff/export_staff/?start_time=&end_time=&team=&name=&card=&tel=6570	
+// 			$.ajax({
+// 				url: "/admin/staff/export_staff/",
+// 				type: 'GET',
+// 				data: {
+// 					start_time:	"<{$start_time}>",
+// 					end_time:	"<{$end_time}>",
+// 					team:	"<{$team}>",
+// 					name:	"<{$name}>",
+// 					card:	"<{$card}>",
+// 					tel:	"<{$tel}>",
 
-		}
+// 				},
+// 				dataType:"json",
+// 				success: function(obj){
+
+// //					if(obj){
+// //						if(obj.msg == "success"){
+// ////							window.location.href="<?php echo $output['actionurl'];?>&exporttype=excel&end=1";
+// //						}else{
+// //							ajaxFile(obj.id, ++page);
+// //						}
+// //					}else{
+// //						alert("ERROR!");
+// //					}
+// 				}
+// 			})
+
+		});
 
 
 		

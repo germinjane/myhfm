@@ -17,7 +17,10 @@
     <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet" />
     <style type="text/css">
         .form-group{ width: 100%;height: 30px;}
-        .ibox-content{display: block}
+        .input-vali{ position: relative !important;}
+        .input-vali .help-block{ position: absolute !important;    left: 100% !important;
+            bottom: 2px !important;    display: block; width: 180px;}
+
     </style>
 </head>
 <body class="gray-bg">
@@ -29,14 +32,14 @@
                 <div class="ibox-title">
                     <h2>修改员工资料</h2>
                 </div>
-                <div class="ibox-content">
+                <div class="ibox-content" style="overflow: hidden !important;">
                     <div class="row m-t">
                         <div class="col-md-12">
                             <form class="form-horizontal" action="/admin/staff/edit_staff/" method="post" >
                                <input type="hidden"value="<{$res.id}>" id="id" name="id">	
                                 <div class="form-group">
                                 <label class="col-md-2 control-label">姓名:</label>
-                                <div class="col-md-6">
+                                <div class="col-md-6 input-vali">
                                     <input type="text" class="form-control input-sm" placeholder="姓名" value="<{$res.name}>" id="name" name="name">
                                 </div>
 
@@ -46,7 +49,7 @@
 
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">性别:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="radio"  placeholder="男"  class="sex1"   value="1" name="sex">
                                         <span>男</span>
                                         <input type="radio"  placeholder="女"    class="sex2" value="2" name="sex">
@@ -56,7 +59,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">是否在岗:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="radio" placeholder="在职"   class="is_leave1"  value="1" name="is_leave">
                                         <span>在职</span>
                                         <input type="radio"  placeholder="离岗"    class="is_leave2"  value="2" name="is_leave">
@@ -66,21 +69,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">所属团队:</label>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control input-sm" placeholder="所属团队" value="<{$res.team}>" id="team" name="team">
+                                    <div class="col-md-6 input-vali">
+                                        <input type="text" class="form-control input-sm col-md-6" placeholder="所属团队" value="<{$res.team}>" id="team" name="team">
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">电话:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="电话" value="<{$res.tel}>" id="tel" name="tel">
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">身份证号码:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="身份证号码" value="<{$res.card}>" id="card" name="card">
                                     </div>
 
@@ -88,7 +91,7 @@
 
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">备注:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 input-vali">
                                         <input type="text" class="form-control input-sm" placeholder="备注" value="<{$res.remark}>" id="remark" name="remark">
                                     </div>
 
@@ -96,7 +99,7 @@
 
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">入职时间:</label>
-                                    <div class="col-md-6 date">
+                                    <div class="col-md-6 date input-vali">
                                         <div class="input-group date">
                                             <span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
                                             <input type="text" class="form-control datePicker" name="hiredate" style="color: red;" value="<{$res.hiredate}>" id="hiredate" placeholder="入职时间">
@@ -108,7 +111,7 @@
                                 
                                  <div class="form-group">
                                      <label class="col-md-2 control-label">离职时间:</label>
-                                     <div class="col-md-6 date">
+                                     <div class="col-md-6 date input-vali">
                                          <div class="input-group date">
                                              <span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
                                              <input type="text" class="form-control datePicker" name="leave_time" style="color: red;" value="<{$res.leave_time}>" id="leave_time" placeholder="离职时间">

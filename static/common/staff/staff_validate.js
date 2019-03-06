@@ -72,8 +72,8 @@ $(function(){
                             message: '身份证号码不能为空'
                         },
                         regexp: {//正则验证
-                            regexp: /^[0-9X]{18}$/,
-                            message: '所输入的字符不符要求'
+                            regexp: /^[0-9]{17}[0-9X]{1}$/,
+                            message: '请输入正确格式的身份证号码'
                         },
                     }
                 },
@@ -84,14 +84,14 @@ $(function(){
                         },
                         regexp: {//正则验证
                             regexp: /^[0-9]{11}$/,
-                            message: '所输入的字符不符要求'
+                            message: '电话号码必须是11位纯数字哦'
                         },
                     }
                 },
                 hiredate: {
                     validators: {
                         date: {//验证指定的日期格式
-                            format: 'YYYY/MM/DD',
+                            format: 'YYYY-MM-DD',
                             message: '日期格式不正确'
                         }
                     }
@@ -99,7 +99,7 @@ $(function(){
                 leave_time: {
                     validators: {
                         date: {//验证指定的日期格式
-                            format: 'YYYY/MM/DD',
+                            format: 'YYYY-MM-DD',
                             message: '日期格式不正确'
                         }
                     }
