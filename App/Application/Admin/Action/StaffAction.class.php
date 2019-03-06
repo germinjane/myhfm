@@ -229,7 +229,12 @@ class StaffAction extends CommonAction{
 					if(!empty($arr[$i]['D'])){
 
 						if(preg_match('/^[0-9]{17}[0-9X]{1}$/',$arr[$i]['D'])){
-							$dat['card'] = $arr[$i]['D'];
+							if($this->check_exist('card',$data['card']){
+								$error_message[$i][] = "身份证重复！";
+							}else{
+								$dat['card'] = $arr[$i]['D'];
+							}
+							
 						}else{
 							$error_message[$i][] = "身份证格式不正确";
 						}
@@ -238,10 +243,9 @@ class StaffAction extends CommonAction{
 						$error_message[$i][] = "身份证不能为空";
 					}
 					if(intval($arr[$i]['E'])){
-						// echo $arr[$i]['E'];
-						// echo preg_match('/^[0-9]{11}$/',$arr[$i]['E']);exit;
 
 						if(preg_match('/^[0-9]{11}$/',$arr[$i]['E'])){
+
 							$dat['tel'] = $arr[$i]['E'];
 						}else{
 
@@ -281,7 +285,7 @@ class StaffAction extends CommonAction{
 							// "/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/"
 							$dat['leave_time'] = $arr[$i]['H'];
 						}else{
-							$error_message[$i][] = "日期格式必须是 年-月-日   或者 年/月/日";
+							$error_message[$i][] = "日期格式必须是 年-月-日  或者 年/月/日";
 						}
 
 					}else{
@@ -321,7 +325,7 @@ class StaffAction extends CommonAction{
 					
 					$this->error('格式错误导入失败！', 12);die;
 				}else{
-					$this->success('导入成功!','/admin/Staff/staff_list/');
+					$this->success('导入成功!','/admin/Staff/staff_list/',15);
 				}
 
 				// $insertInfo = D('staff')->addAll($data);
