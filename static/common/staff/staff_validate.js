@@ -88,22 +88,22 @@ $(function(){
                         },
                     }
                 },
-                //hiredate: {
-                //    validators: {
-                //        date: {//验证指定的日期格式
-                //            format: 'YYYY-MM-DD',
-                //            message: '日期格式不正确'
-                //        }
-                //    }
-                //},
-                //leave_time: {
-                //    validators: {
-                //        date: {//验证指定的日期格式
-                //            format: 'YYYY-MM-DD',
-                //            message: '日期格式不正确'
-                //        }
-                //    }
-                //}
+                hiredate: {
+                   validators: {
+                       date: {//验证指定的日期格式
+                           format: 'YYYY-MM-DD',
+                           message: '日期格式不正确'
+                       }
+                   }
+                },
+                leave_time: {
+                   validators: {
+                       date: {//验证指定的日期格式
+                           format: 'YYYY-MM-DD',
+                           message: '日期格式不正确'
+                       }
+                   }
+                }
 
             }
         });

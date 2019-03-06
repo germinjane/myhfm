@@ -5,10 +5,17 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>名药汇员工花名册系统--持续更新</title>
+
+	<!-- 备注弹窗css start -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- 备注弹窗css end -->
 	<link href="/static/common/inspinia/css/bootstrap.min.css" rel="stylesheet" />
+
 	<link href="/static/common/inspinia/css/style.min.css" rel="stylesheet" />
 		<link href="/static/common/inspinia/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="/static/common/inspinia/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+
 	<!-- datePicker -->
 	<link href="/static/common/inspinia/css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
 	<style type="text/css">
@@ -122,7 +129,8 @@
 							<td><{$v.hiredate}></td>
 							<td><if condition="$v.is_leave eq 1">在职<else/>离岗</if></td>
 							<td><{$v.leave_time}></td>
-							<td><{$v.remark}></td>
+							<td title="备注详情"  data-container="body" data-toggle="popover" data-placement="left" 
+			data-content="<{$v.remark}>"><{$v.remark_s}></td>
 
 							<!--mb_substr( $str, $start, $length, $encoding )-->
 							<td><a href="/admin/staff/edit_staff/id/<{$v['id']}>/" class="btn btn-primary">修改</a>&nbsp;<a href="javascript:void(0)" ids="<{$v['id']}>" class="btn btn-primary del-staff">删除</a></td>
@@ -145,6 +153,8 @@
 	<script type="text/javascript" src="/static/common/inspinia/js/plugins/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript" src="/static/common/inspinia/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 	<script type="text/javascript" src="/static/common/inspinia/js/plugins/datapicker/datepicker-unixtime.js"></script>
+	<!-- 备注弹窗js -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 <script>
 	$(document).ready(function(){
@@ -153,8 +163,8 @@
 			var id = parseInt($(this).attr('ids'));
 
 			if(confirm("确定要删除这个员工吗？")){
-//				window.location.href = "/admin/staff/del_staff/id/"+id+"/";
-//				console.log("id"+id);
+				// window.location.href = "/admin/staff/del_staff/id/"+id+"/";
+
 				window.location.replace("/admin/staff/del_staff/id/"+id+"/");
 			}else{
 				console.log("good job!");
@@ -162,8 +172,9 @@
 
 		});
 
+		//导出按钮
 		$('.btn-import').click(function(){
-//			alert("导出啦！！");
+			// alert("导出啦！！");
 			var url = "/admin/staff/export_staff/"
 				+"?start_time=<{$start_time}>"
 				+"&end_time=<{$end_time}>"
@@ -172,37 +183,28 @@
 				+"&card=<{$card}>"
 				+"&tel=<{$tel}>";
 			window.location.replace(url);		
-			// http://www.myhfm.com/admin/staff/export_staff/?start_time=&end_time=&team=&name=&card=&tel=6570	
-// 			$.ajax({
-// 				url: "/admin/staff/export_staff/",
-// 				type: 'GET',
-// 				data: {
-// 					start_time:	"<{$start_time}>",
-// 					end_time:	"<{$end_time}>",
-// 					team:	"<{$team}>",
-// 					name:	"<{$name}>",
-// 					card:	"<{$card}>",
-// 					tel:	"<{$tel}>",
-
-// 				},
-// 				dataType:"json",
-// 				success: function(obj){
-
-// //					if(obj){
-// //						if(obj.msg == "success"){
-// ////							window.location.href="<?php echo $output['actionurl'];?>&exporttype=excel&end=1";
-// //						}else{
-// //							ajaxFile(obj.id, ++page);
-// //						}
-// //					}else{
-// //						alert("ERROR!");
-// //					}
-// 				}
-// 			})
 
 		});
 
+		// $("[data-toggle='popover']").popover();
+		// $("[data-toggle='popover']").mouseover(function(){
+		// 	$(this).trigger("click");
+		// });
+		// $("[data-toggle='popover']").mouseover(function(){
+		// 	$(this).trigger("click");
+		// });
 
+		//备注弹窗
+		$("[data-toggle='popover']").hover(function(){
+			if($(this).attr('data-content')!=""){
+				$(this).trigger("click");
+			}
+		},function(){
+		    if($(this).attr('data-content')!=""){
+				$(this).trigger("click");
+			}
+		});
+		$("[data-toggle='popover']").popover();
 		
 	})
 </script>
