@@ -34,27 +34,18 @@ class StaffAction extends CommonAction{
 		$show = $Page->show();
 		$list = $Data->where($where)->order('id')->limit($Page->firstRow.','.$Page->listRows)
 			->select();
-//		if(IS_POST){
-//			echo $Data ->getLastSql();
-//
-//			echo '-------------';exit;}
+
 
 
 		$this->assign('res', $list);
 		$this->assign('page',$show);// 赋值分页输出
-//		$res =D('Staff')->where($opt['where'])->order('id')->select();
 
-//		var_dump($res);exit;
-
-//		$this->assign('res', $res);
 		$this->display();
 	}
 	
 	
     public function add_staff(){
         if(IS_POST){
-//			var_dump($_POST);exit;
-
             $data = array();
 			
 			$data['name'] = I('request.name');
@@ -209,7 +200,93 @@ class StaffAction extends CommonAction{
 				for($i=2; $i<= count($arr); $i++){
 
 					//数据格式判断
-					
+					if(!empty($arr[$i]['A'])){
+						$dat['team'] = $arr[$i]['A'];
+					}else{
+						$error_message[$i][] = "团队不能为空";
+					}
+
+					if(!empty($arr[$i]['B'])){
+						$dat['team'] = $arr[$i]['B'];
+					}else{
+						$error_message[$i][] = "姓名不能为空";
+					}
+					if(!empty($arr[$i]['C'])){
+						if(in_array($arr[$i]['C'],["男","女"])){
+
+						}else{
+							$error_message[$i][] = "性别只能填写男或女";
+						}
+					}else{
+						$error_message[$i][] = "性别不能为空";
+					}
+					if(!empty($arr[$i]['D'])){
+
+						if(preg_match('/^[0-9]{17}[0-9X]{1}$/',$arr[$i]['D'])){
+							$dat['card'] = $arr[$i]['D'];
+						}else{
+							$error_message[$i][] = "身份证格式不正确";
+						}
+
+					}else{
+						$error_message[$i][] = "身份证不能为空";
+					}
+					if(intval($arr[$i]['E'])){
+//						echo $arr[$i]['E'];
+//						echo preg_match('/^[0-9]{11}$/',$arr[$i]['E']);exit;
+
+						if(preg_match('/^[0-9]{11}$/',$arr[$i]['E'])){
+							$dat['tel'] = $arr[$i]['E'];
+						}else{
+
+
+							$error_message[$i][] = "电话号码格式不正确";
+						}
+
+					}else{
+						$error_message[$i][] = "电话不能为空";
+					}
+					if(!empty($arr[$i]['F'])){
+
+						if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$arr[$i]['D'])){
+							$dat['hiredate'] = $arr[$i]['F'];
+						}else{
+							$error_message[$i][] = "日期格式必须是 年-月-日";
+						}
+
+					}else{
+						$error_message[$i][] = "入职日期不能为空";
+					}
+
+					if(!empty($arr[$i]['G'])){
+						if(in_array($arr[$i]['G'],["在职","离岗"])){
+
+						}else{
+							$error_message[$i][] = "在职/离岗 只能填写在职或离岗";
+						}
+					}else{
+						$error_message[$i][] = "在职/离岗 不能为空";
+					}
+
+					if(!empty($arr[$i]['H'])){
+
+						if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$arr[$i]['D'])){
+							$dat['leave_time'] = $arr[$i]['H'];
+						}else{
+							$error_message[$i][] = "日期格式必须是 年-月-日";
+						}
+
+					}else{
+						$dat['leave_time'] = $arr[$i]['H'];
+					}
+
+					if(empty($error_message[$i])){
+						$dat['create_time'] = $create_time;
+						D('staff')->add($dat);
+					}
+
+
+
 //					$dat = array(
 //						'team'	=>	$arr[$i]['A'],
 //						'name'	=>	$arr[$i]['B'],
@@ -227,15 +304,23 @@ class StaffAction extends CommonAction{
 //					if()
 
 
-					$data[] = $dat;
+//					$data[] = $dat;
 				}
-
-				$insertInfo = D('staff')->addAll($data);
-
-				if($insertInfo){
+				if(!empty($error_message)){
+					var_dump($error_message);exit;
+					$this->error('导入失败！', 12);die;
+				}else{
 					$this->success('导入成功!','/admin/Staff/staff_list/');
 				}
-				$this->error('导入失败！');die;
+
+//				$insertInfo = D('staff')->addAll($data);
+//
+//				if($insertInfo){
+//					$this->success('导入成功!','/admin/Staff/staff_list/');
+//				}
+//				$this->error('导入失败！');die;
+
+
 			}else{
 				$this->error('文件类型必须是excel！');die;
 			}
@@ -395,9 +480,7 @@ class StaffAction extends CommonAction{
 		$upload->exts = array('jpg', 'gif', 'png', 'jpeg', 'xls');// 设置附件上传类型
 		$upload->savePath = APP_PATH  . 'Upload/xls/'; // 设置附件上传（子）目录
 		// 上传文件
-//		$info = $upload->upload($file);
 		$info = $upload->uploadOne($file['excel']);
-//		$info = $info['inputfile'];
 		if(!$info) {// 上传错误提示错误信息
 			$this->error($upload->getErrorMsg());
 		}

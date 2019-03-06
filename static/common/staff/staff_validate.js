@@ -88,30 +88,31 @@ $(function(){
                         },
                     }
                 },
-                hiredate: {
-                    validators: {
-                        date: {//验证指定的日期格式
-                            format: 'YYYY-MM-DD',
-                            message: '日期格式不正确'
-                        }
-                    }
-                },
-                leave_time: {
-                    validators: {
-                        date: {//验证指定的日期格式
-                            format: 'YYYY-MM-DD',
-                            message: '日期格式不正确'
-                        }
-                    }
-                }
+                //hiredate: {
+                //    validators: {
+                //        date: {//验证指定的日期格式
+                //            format: 'YYYY-MM-DD',
+                //            message: '日期格式不正确'
+                //        }
+                //    }
+                //},
+                //leave_time: {
+                //    validators: {
+                //        date: {//验证指定的日期格式
+                //            format: 'YYYY-MM-DD',
+                //            message: '日期格式不正确'
+                //        }
+                //    }
+                //}
 
             }
         });
         $("#btn-test").click(function () {//非submit按钮点击后进行验证，如果是submit则无需此句直接验证
-            $("#form-test").bootstrapValidator('validate');//提交验证
-            if ($("#form-test").data('bootstrapValidator').isValid()) {//获取验证结果，如果成功，执行下面代码
-                alert("yes");//验证成功后的操作，如ajax
-            }
+            //$("#form-test").bootstrapValidator('validate');//提交验证
+            //if ($("#form-test").data('bootstrapValidator').isValid()) {//获取验证结果，如果成功，执行下面代码
+            //    alert("yes");//验证成功后的操作，如ajax
+            //}
+
         });
 	
 	
