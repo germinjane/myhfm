@@ -112,6 +112,7 @@ class StaffAction extends CommonAction{
 		$staff_info = D('Staff')->where(" id='{$id}' ")->find();
 
 		$staff_info['hiredate'] = date('Y-m-d',strtotime($staff_info['hiredate']));
+		$staff_info['leave_time'] =date_to_unixtime($staff_info['leave_time'])!= 0 ?$staff_info['leave_time']:'';
 
 		
 		$this->assign('res',$staff_info);
@@ -292,10 +293,13 @@ class StaffAction extends CommonAction{
 							// $this->error('导入失败！','', 12);die;
 						}
 					}
+					// echo mb_strlen($mess);
 					//所有操作后二次检查
-					if(mb_strlen($mess)>10) $error_message .= $mess;
+					if(mb_strlen($mess)>10){$error_message .= $mess;}
 					// $data[] = $dat;
+					unset($mess);
 				}
+				
 				if(mb_strlen($error_message)>0){
 		
 					$this->error($error_message,'', 15);die;
