@@ -9,36 +9,31 @@ class StaffAction extends CommonAction{
 
 		if(IS_GET||IS_POST){
 
-			//分页
-			$p = I('request.p');
-
 			list($where1, $where) = $this->filter_data();
-
-			$this->assign('name', $where1['name']);
-			$this->assign('start_time', $where1['start_time']);
-			$this->assign('end_time', $where1['end_time']);
-			$this->assign('card', $where1['card']);
-			$this->assign('team', $where1['team']);
-			$this->assign('tel', $where1['tel']);
+			$cond['name'] = $where1['name'];
+			$cond['start_time'] = $where1['start_time'];
+			$cond['end_time'] = $where1['end_time'];
+			$cond['card'] = $where1['card'];
+			$cond['team'] = $where1['team'];
+			$cond['tel'] = $where1['tel'];
+		
 		}
-
-
-		$Data = M('Staff');
-		import('ORG.Util.Page');
-
-		$count = $Data->where($where)->count();
-
-
-		$Page = new \Page($count, 10);
-		$show = $Page->show();
-		$list = $Data->where($where)->order('id')->limit($Page->firstRow.','.$Page->listRows)
-			->select();
+		//查找对应条件下的分页列表
+		list($list, $show) = D('Staff')->page_staff($where);
+		
 		foreach ($list as $key => &$value) {
+			$value['hiredate'] = date('Y-m-d',strtotime($value['hiredate']));
+			$value['tel'] = mb_strlen(trim($value['tel']))==0 ? "/":$value['tel'];
+			$value['leave_time'] = strtotime($value['leave_time'])==0 ? "/":$value['leave_time'];
 			$value['remark_s'] = mb_substr($value['remark'], 0,10, $charset="utf-8");
 			if(mb_strlen($value['remark'])> 10) $value['remark_s'] .="...";
 		}
-		$this->assign('res', $list);
-		$this->assign('page',$show);// 赋值分页输出
+
+		$cond['res'] = $list;
+		$cond['page'] = $show;
+
+		$this->assign($cond);
+		
 
 		$this->display();
 	}
@@ -65,12 +60,10 @@ class StaffAction extends CommonAction{
                 $this->error('请填写姓名！');die;
             }
 
-
             if($this->check_exist('card',$data['card'])){
                 $this->error('身份证，不能重复添加！');die;
             }
     
-
 			$data['createtime'] = date('Y-m-d H:i:s',time());
 
 
@@ -140,14 +133,15 @@ class StaffAction extends CommonAction{
 
 
 		$id = I('id',0,'intval');
+		$url = I('jump_url');
 		if(!$id){
 			$this->error('无用户id，不能重复添加！');die;
 		}
-		
+		$url = str_replace("-","/",$url);
 		$data = array('id'=>$id);
 		$res = D('Staff')->where($data)->delete(); 
 		if($res){
-			$this->success('删除成功!','/admin/Staff/staff_list/');
+			$this->success('删除成功!',$url,5);
 		}else{
 			$this->error('删除失败！');die;
 		}
@@ -157,30 +151,24 @@ class StaffAction extends CommonAction{
 	//员工基本信息条件搜索
 	public function check_exist($key, $value, $id=0){
 
-		if($id!=0){
-			$sql="".$key."='{$value}' and id<>'{$id}' ";
-		}else{
-			$sql=" ".$key."='{$value}' ";
-		}
-		$userinfo= D('Staff')->where($sql)->find();
-
-		if(empty($userinfo)){
-			return false;
-		}
-		return true;
+		return D('Staff')->check_exist($key, $value, $id);
 	}
 
 	// 导入Excel
 	public function import_staff(){
 
+
+
 		if($_FILES){
+
+			// var_dump($_FILES);exit;
 			 $file_type = strtolower(pathinfo($_FILES['excel']['name'], PATHINFO_EXTENSION));
 			if($file_type == 'xlsx'||$_FILES['excel']['type'] =='xls' ){
 				$file = $_FILES;
 				$path = $this->upload($file);
 				$arr = $this->i_excel($path, 0);
 				$data = [];
-
+				// echo 11;exit;
 				// $stard = array(
 				// 	'A'	=>	'所属团队',
 				// 	'B'	=>	'姓名',
@@ -201,48 +189,59 @@ class StaffAction extends CommonAction{
 				//表格内容格式状态默认是true
 				$format_state = true;
 				//用于存储错误提示信息
-				$error_message = array();
+				$error_message = '';
 
 				for($i=2; $i<= count($arr); $i++){
+
+
+					$mess = "第".$i."行导入失败原因：";
 
 					//数据格式判断
 					if(!empty($arr[$i]['A'])){
 						$dat['team'] = $arr[$i]['A'];
 					}else{
-						$error_message[$i][] = "团队不能为空";
+						// $error_message[$i][] = "团队不能为空";
+						$mess .= '团队不能为空<br/>';
+
 					}
 
 					if(!empty($arr[$i]['B'])){
-						$dat['team'] = $arr[$i]['B'];
+						$dat['name'] = $arr[$i]['B'];
 					}else{
-						$error_message[$i][] = "姓名不能为空";
+						// $error_message[$i][] = "姓名不能为空";
+						$mess .= '姓名不能为空<br/>';
 					}
 					if(!empty($arr[$i]['C'])){
 						if(in_array($arr[$i]['C'],["男","女"])){
 
 						}else{
-							$error_message[$i][] = "性别只能填写男或女";
+							// $error_message[$i][] = "性别只能填写男或女";
+							$mess .= '性别只能填写男或女<br/>';
 						}
 					}else{
 						$error_message[$i][] = "性别不能为空";
+						$mess .= '性别不能为空<br/>';
 					}
 					if(!empty($arr[$i]['D'])){
 
 						if(preg_match('/^[0-9]{17}[0-9X]{1}$/',$arr[$i]['D'])){
-							if($this->check_exist('card',$data['card']){
-								$error_message[$i][] = "身份证重复！";
+							if($this->check_exist('card',$arr[$i]['D'])){
+								// $error_message[$i][] = "身份证已存在！";
+								$mess .= '身份证已存在<br/>';
 							}else{
 								$dat['card'] = $arr[$i]['D'];
 							}
 							
 						}else{
-							$error_message[$i][] = "身份证格式不正确";
+							// $error_message[$i][] = "身份证格式不正确";
+							$mess .= '身份证格式不正确<br/>';
 						}
 
 					}else{
-						$error_message[$i][] = "身份证不能为空";
+						// $error_message[$i][] = "身份证不能为空";
+						$mess .= '身份证不能为空<br/>';
 					}
-					if(intval($arr[$i]['E'])){
+					if(strlen($arr[$i]['E']) > 0){
 
 						if(preg_match('/^[0-9]{11}$/',$arr[$i]['E'])){
 
@@ -250,11 +249,13 @@ class StaffAction extends CommonAction{
 						}else{
 
 
-							$error_message[$i][] = "电话号码格式不正确";
+							// $error_message[$i][] = "电话号码格式不正确";
+							$mess .= '电话号码格式不正确<br/>';
 						}
 
 					}else{
-						$error_message[$i][] = "电话不能为空";
+						// $error_message[$i][] = "电话不能为空";
+						$mess .= '电话不能为空<br/>';
 					}
 					if(!empty($arr[$i]['F'])){
 
@@ -262,21 +263,26 @@ class StaffAction extends CommonAction{
 							$dat['hiredate'] = $arr[$i]['F'];
 						}else{
 
-							$error_message[$i][] = "日期格式必须是 年-月-日 或者 年/月/日";
+							// $error_message[$i][] = "日期格式必须是 年-月-日 或者 年/月/日";
+							$mess .= '日期格式必须是 年-月-日 或者 年/月/日<br/>';
+
 						}
 
 					}else{
-						$error_message[$i][] = "入职日期不能为空";
+						// $error_message[$i][] = "入职日期不能为空";
+						$mess .= '入职日期不能为空<br/>';
 					}
 
 					if(!empty($arr[$i]['G'])){
 						if(in_array($arr[$i]['G'],["在职","离岗"])){
 
 						}else{
-							$error_message[$i][] = "在职/离岗 只能填写在职或离岗";
+							// $error_message[$i][] = "在职/离岗 只能填写在职或离岗";
+							$mess .= '在职/离岗 只能填写在职或离岗<br/>';
 						}
 					}else{
-						$error_message[$i][] = "在职/离岗 不能为空";
+						// $error_message[$i][] = "在职/离岗 不能为空";
+						$mess .= '在职/离岗 不能为空<br/>';
 					}
 
 					if(!empty($arr[$i]['H'])){
@@ -285,47 +291,34 @@ class StaffAction extends CommonAction{
 							// "/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/"
 							$dat['leave_time'] = $arr[$i]['H'];
 						}else{
-							$error_message[$i][] = "日期格式必须是 年-月-日  或者 年/月/日";
+							// $error_message[$i][] = "日期格式必须是 年-月-日  或者 年/月/日";
+							$mess .= '日期格式必须是 年-月-日  或者 年/月/日<br/>';
 						}
 
 					}else{
 						$dat['leave_time'] = $arr[$i]['H'];
 					}
 
-					if(empty($error_message[$i])){
+					if(mb_strlen($mess)<=10){
+
 						$dat['create_time'] = $create_time;
 						$res = D('staff')->add($dat);
 						if(!$res){
-							$this->error('导入失败！', 12);die;
+							$this->error('导入失败！','', 12);die;
 						}
+					}else{
+						$error_message .= $mess;
+						
 					}
-
-
-
-					// $dat = array(
-					// 	'team'	=>	$arr[$i]['A'],
-					// 	'name'	=>	$arr[$i]['B'],
-					// 	'sex'	=>	$arr[$i]['C']=='男'?1:2,
-					// 	'card'	=>	$arr[$i]['D'],
-					// 	'tel'	=>	$arr[$i]['E'],
-					// 	'hiredate'	=>	$arr[$i]['F'],
-					// 	'is_leave'	=>	($arr[$i]['G'] == '在职')?1:2,
-					// 	'leave_time'=>	$arr[$i]['H'],
-					// 	'remark'	=>	$arr[$i]['I'],
-					// 	'create_time' =>$create_time,
-					// 	'is_leave'	=> empty($leave_time)? 1:2
-
-					// 	);
-					// if()
 
 
 					// $data[] = $dat;
 				}
-				if(!empty($error_message)){
-					
-					$this->error('格式错误导入失败！', 12);die;
+				if(mb_strlen($error_message)>0){
+		
+					$this->error($error_message,'', 15);die;
 				}else{
-					$this->success('导入成功!','/admin/Staff/staff_list/',15);
+					$this->success('导入成功!','/admin/Staff/staff_list/',5);
 				}
 
 				// $insertInfo = D('staff')->addAll($data);
