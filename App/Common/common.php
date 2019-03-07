@@ -498,4 +498,37 @@ function isNum($str,$flag = 'float'){
 	}
 }
 
+// 修改日期：2019-03-07
+// PHP下Unix时间戳与日期互转（解决1970年前及2038年后问题）
+//1、Unix时间戳转日期
+function unixtime_to_date($unixtime, $timezone = 'PRC') {
+    $datetime = new DateTime("@$unixtime"); //DateTime类的bug，加入@可以将Unix时间戳作为参数传入
+    $datetime->setTimezone(new DateTimeZone($timezone));
+    return $datetime->format("Y-m-d H:i:s");
+}
+ 
+//2、日期转Unix时间戳
+function date_to_unixtime($date, $timezone = 'PRC') {
+    $datetime= new DateTime($date, new DateTimeZone($timezone));
+    return $datetime->format('U');
+}
+
+
+//上传
+function upload($file, $dir = 'Upload/xls/', $max_size = 3145728){
+
+	import('ORG.Net.UploadFile');
+	$upload = new \UploadFile();
+	$upload->maxSize = $max_size ;// 设置附件上传大小
+	$upload->exts = array('jpg', 'gif', 'png', 'jpeg', 'xls');// 设置附件上传类型
+	$upload->savePath = APP_PATH  . $dir; // 设置附件上传（子）目录
+	// 上传文件
+	$info = $upload->uploadOne($file['excel']);
+	if(!$info) {// 上传错误提示错误信息
+		$this->error($upload->getErrorMsg());
+	}
+
+	return $info[0]['savepath'] . $info[0]['savename'];
+}
+
 ?>

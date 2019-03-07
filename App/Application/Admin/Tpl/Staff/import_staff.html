@@ -14,37 +14,33 @@
 	<style type="text/css">
 		.check_box{ width: 14%; display: block;}
 	</style>
-	<script type="application/javascript">
 
-	</script>
 </head>
 <body class="gray-bg">
-	<div class="row wrapper border-bottom white-bg page-heading" style="overflow:auto;">
-		<div class="col-lg-10">
-			<h2 class="col-md-3">导入员工数据</h2>
-		</div>
+	
+	<div class="wrapper wrapper-content">
+		<div class="row">
+        	<div class="col-md-12">
+				<div class="ibox ">
+					<div class="ibox-title">
+	                    <h2>导入员工数据</h2>
+	                </div>
+					<div class="ibox-content"  style="overflow: hidden;">
+						<div class="col-md-12">
+							<form  class="form-horizontal" action="/admin/staff/import_staff/" method="post" enctype="multipart/form-data">
+								<div class="col-md-6 " style="width: 20%;float: left">
 
-	</div>
-	<div class="wraper wrapper-content">
-		<div class="ibox float-e-margins">
-		<div class="ibox-content"  style="overflow: hidden;">
-			<div class="col-md-12">
-
-				<form  class="form-horizontal" action="/admin/staff/import_staff/" method="post" enctype="multipart/form-data">
-					<div class="col-md-6 " style="width: 20%;float: left">
-
-						<input type="file" name="excel" id="excel"/>
+									<input type="file" name="excel" id="excel"/>
+								</div>
+								<div class="col-md-6" style="width: 20%">
+									<button  class="btn btn-sm btn-primary" id="btnImport" type="submit">导入</button>
+								</div>
+							</form>
+						</div>
+					<div>
+					<div class="col-md-6" >
+						<a href="<{$_SREVER['SERVER_NAME']}>/dataFormat_bd.xlsx" class="btn btn-primary">下载模板</a>
 					</div>
-					<div class="col-md-6" style="width: 20%">
-						<button  class="btn btn-sm btn-primary" id="btnImport" type="submit">导入</button>
-					</div>
-				</form>
-			</div>
-		
-		
-			<div>
-				<div class="col-md-6" >
-					<a href="<{$_SREVER['SERVER_NAME']}>/dataFormat_bd.xlsx" class="btn btn-primary">下载模板</a>
 				</div>
 			</div>
 		</div>

@@ -13,7 +13,7 @@ return array(
 	'APP_GROUP_PATH'  => 'Application',//分组项目路径
 	/**分组配置end**/
 
-	'LOAD_EXT_CONFIG' => 'language,db', // 加载扩展配置文件
+	'LOAD_EXT_CONFIG' => 'language,db,staff', // 加载扩展配置文件
 
 	/**模板配置start**/
 	'TMPL_L_DELIM'   => '<{', //左定界符

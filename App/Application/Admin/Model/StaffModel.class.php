@@ -25,7 +25,7 @@ class StaffModel extends RelationModel{
 
 		$Page = new \Page($count, 10);
 		$show = $Page->show();
-		$list = $Data->where($where)->order('id')->limit($Page->firstRow.','.$Page->listRows)
+		$list = $Data->where($where)->order('id DESC')->limit($Page->firstRow.','.$Page->listRows)
 			->select();
 
 		return array($list, $show);
